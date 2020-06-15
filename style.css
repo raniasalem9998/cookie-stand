@@ -28,7 +28,8 @@ h2,h1{
 #welcome{
     text-align: center;
 }
-ul li{
+ul ,li{
+    margin: 0%;
     text-align: center;
     background-color: rgba(119, 18, 15, 0.685);
     color: floralwhite;

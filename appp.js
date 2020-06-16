@@ -1,5 +1,6 @@
 'use strict'
 var locationArr = [];
+var totalOfTotal = 0;
 console.log(locationArr)
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
@@ -85,6 +86,7 @@ Sales.prototype.calculateSum=function(){
     }
     this.array.push(this.sum)
     console.log(this.array)
+    totalOfTotal=totalOfTotal+this.sum
 
 return this.array;
 
@@ -96,14 +98,14 @@ function generatFooter() {
     footerTd.textContent = ('total');
     footerTr.appendChild(footerTd);
 
-    var totalOfTotal = 0;
+   
     for (var i = 0; i < hours.length; i++) {
         var hourTotalTd = document.createElement('td');
         var hourTotal = 0;
         for (var j = 0; j < locationArr.length; j++) {
-            hourTotal += locationArr[j].array[i];
-            totalOfTotal += locationArr[j].sum;
+            hourTotal += locationArr[j].array[i]
         }
+        totalOfTotal +=hourTotal;
         hourTotalTd.textContent = hourTotal;
         footerTr.appendChild(hourTotalTd);
     }

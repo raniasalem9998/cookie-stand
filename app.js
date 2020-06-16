@@ -3,6 +3,15 @@ var allCookies = 0;
 var cookiesPerHour = 0;
 var hours= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
 
+// function Sales (location,minCostumerNum,maxCostumerNum,avrCookies){
+// this.location=location;
+// this.minCostumerNum=minCostumerNum;
+// this.maxCostumerNum=maxCostumerNum;
+// this.avrCookies=avrCookies;
+// this.cookiesInHour=[];
+// this.totalArray=[];
+// }
+
 var seattle = {
     location: 'seattle',
     minCostumerNum: 23,
@@ -10,7 +19,7 @@ var seattle = {
     avrCookies: 6.3,
     cookiesInHour: [],
     //cookies in the hour
-    totalArray: [],
+    total:[],
 
     cookies: function () {
 
@@ -21,7 +30,7 @@ var seattle = {
             this.cookiesInHour.push(cookiesPerHour);
             allCookies = allCookies + this.cookiesInHour[i];
             console.log(allCookies)
-            this.totalArray.push(allCookies);
+            this.total.push(allCookies);
 
         };
     },
@@ -36,7 +45,7 @@ var seattle = {
             
         }
         var li = document.createElement('li');
-            li.textContent = 'Total:' + allCookies;
+            li.textContent = 'Total:' + this.total[12];
             ul1.appendChild(li);
     }
     
@@ -50,18 +59,17 @@ var Tokyo= {
     avrCookies: 1.2,
     cookiesInHour: [],
     //cookies in the hour
-    totalArray: [],
+    total: [],
 
     cookies: function () {
 
         for (var i = 0; i < hours.length; i++) {
-
             cookiesPerHour = Math.floor(generateRandomNum(this.minCostumerNum, this.maxCostumerNum) * this.avrCookies);
             console.log(cookiesPerHour);
             this.cookiesInHour.push(cookiesPerHour);
             allCookies = allCookies + this.cookiesInHour[i];
             console.log(allCookies)
-            this.totalArray.push(allCookies);
+            this.total.push(allCookies);
 
         };
     },
@@ -76,7 +84,7 @@ var Tokyo= {
             
         }
         var li = document.createElement('li');
-            li.textContent = 'Total:' + allCookies;
+            li.textContent = 'Total:' + this.total;
             ul2.appendChild(li);
     }
     

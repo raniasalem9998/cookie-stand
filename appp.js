@@ -121,7 +121,7 @@ var seattle=new Sales('Seattle',23,65,6.3);
 var Tokyo=new Sales('Tokyo',3,24,1.2);
 var Dubai=new Sales('Dubai',11,38,3.7);
 var Paris = new Sales('Paris',20,38,2.3);
-var Lims = new Sales('Lima',2,16,4.6);
+var Lima = new Sales('Lima',2,16,4.6);
 
 for (var i=0; i<locationArr.length;i++){
   

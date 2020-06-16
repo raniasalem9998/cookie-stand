@@ -110,7 +110,7 @@ function generatFooter() {
         footerTr.appendChild(hourTotalTd);
     }
     var totalOfTotalTd = document.createElement('td');
-    totalOfTotalTd.textContent = totalOfTotal;
+    totalOfTotalTd.textContent = totalOfTotal/2;
     footerTr.appendChild(totalOfTotalTd);
     table.appendChild(footerTr);
 }

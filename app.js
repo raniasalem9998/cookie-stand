@@ -1,5 +1,5 @@
 
-'use strict'
+// 'use strict'
 
 // function generatFooter() {
 //     var footerTr = document.createElement('tr');

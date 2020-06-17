@@ -10,24 +10,14 @@ function Sales(location, minCustomerNumber, maxCustomerNumber, avrgCookies) {
     this.minCustomerNumber = minCustomerNumber;
     this.maxCustomerNumber = maxCustomerNumber;
     this.avrgCookies = avrgCookies;
-    this.cookiesInHour = [];
-    this.totalCookiesPerDay = 0;
     this.sum=0;
-     this.array=[];
+    this.array=[];
     locationArr.push(this);
 };
 
 Sales.prototype.RandomCookies = function () {
-    // var randomCookies;
-    // for (var i = 0; i < hours.length; i++) {
-    //     randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-    //     this.cookiesInHour.push(randomCookies);
-        var randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-        // this.totalCookiesPerDay += randomCookies;
 
-    // }
-  
-//    console.log(randomCookies)
+        var randomCookies = Math.abs(Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies));
    return randomCookies;
 
 };
@@ -84,11 +74,11 @@ Sales.prototype.calculateSum=function(){
         this.sum=this.sum+num;
         this.array.push(num);
     }
-    this.array.push(this.sum)
-    // console.log(this.array)
-    totalOfTotal=totalOfTotal+this.sum
-
+    this.array.push(this.sum);
+    
+    totalOfTotal=totalOfTotal+this.sum;
 return this.array;
+
 
 
 }
@@ -100,17 +90,18 @@ function generatFooter() {
 
    
     for (var i = 0; i < hours.length; i++) {
+       
         var hourTotalTd = document.createElement('td');
         var hourTotal = 0;
         for (var j = 0; j < locationArr.length; j++) {
             hourTotal += locationArr[j].array[i]
         }
-        totalOfTotal +=hourTotal;
+        
         hourTotalTd.textContent = hourTotal;
         footerTr.appendChild(hourTotalTd);
     }
     var totalOfTotalTd = document.createElement('td');
-    totalOfTotalTd.textContent = totalOfTotal/2;
+    totalOfTotalTd.textContent = totalOfTotal;
     footerTr.appendChild(totalOfTotalTd);
     table.appendChild(footerTr);
 }
@@ -127,26 +118,29 @@ for (var i=0; i<locationArr.length;i++){
     locationArr[i].RandomCookies();
     locationArr[i].render();
 }
-var newLocations=document.getElementById('newLocations');
-newLocations.addEventListener('submit',addLocation);
-// console.log(newLocations);
+generatFooter();
+
+var newL=document.getElementById('newL');
+newL.addEventListener('submit',addLocation);
+
 function addLocation(event){
- 
-    // event.preventDefult();
+    console.log(newL);
+
+    event.preventDefault();
     var newLocation= event.target.newLocationInput.value;
     var newMin=event.target.newMinInput.value;
     var newMax=event.target.newMaxInput.value;
     var newAvr=event.target.newAvrInput.value;
-    var newLocationss=new Sales(newLocation,newMin,newMax,newAvr);
-    // console.log(newLocations);
-    newLocationss.RandomCookies();
-    newLocationss.render();
+    newL = new Sales(newLocation,newMin,newMax,newAvr);
+
+    newL.calculateSum();
+    newL.RandomCookies();
+    var rowNumber=table.rows.length;
+    table.deleteRow(rowNumber-1);
+    newL.render();
     
-    console.log(newLocationss);
+    generatFooter();
 }
-
-
-generatFooter();
 
 
 // for(var j=0;j<hours.length;j++){

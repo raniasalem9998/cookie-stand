@@ -6,7 +6,10 @@ body{
     background-color: black;
     
 }
-
+button{
+    height: 20px;
+    width: 60px;
+}
 img {
     display: block;
     margin-left: auto;

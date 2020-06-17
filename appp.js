@@ -22,12 +22,12 @@ Sales.prototype.RandomCookies = function () {
     // for (var i = 0; i < hours.length; i++) {
     //     randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
     //     this.cookiesInHour.push(randomCookies);
-    //    
-        this.totalCookiesPerDay += randomCookies;
+        var randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
+        // this.totalCookiesPerDay += randomCookies;
 
     // }
-   var randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-   console.log(randomCookies)
+  
+//    console.log(randomCookies)
    return randomCookies;
 
 };
@@ -85,7 +85,7 @@ Sales.prototype.calculateSum=function(){
         this.array.push(num);
     }
     this.array.push(this.sum)
-    console.log(this.array)
+    // console.log(this.array)
     totalOfTotal=totalOfTotal+this.sum
 
 return this.array;
@@ -114,7 +114,7 @@ function generatFooter() {
     footerTr.appendChild(totalOfTotalTd);
     table.appendChild(footerTr);
 }
-// calculateSum();
+
 generateHeader();
 
 var seattle=new Sales('Seattle',23,65,6.3);
@@ -124,14 +124,31 @@ var Paris = new Sales('Paris',20,38,2.3);
 var Lima = new Sales('Lima',2,16,4.6);
 
 for (var i=0; i<locationArr.length;i++){
-  
     locationArr[i].RandomCookies();
     locationArr[i].render();
-
-    
-    
 }
+var newLocations=document.getElementById('newLocations');
+newLocations.addEventListener('submit',addLocation);
+// console.log(newLocations);
+function addLocation(event){
+ 
+    // event.preventDefult();
+    var newLocation= event.target.newLocationInput.value;
+    var newMin=event.target.newMinInput.value;
+    var newMax=event.target.newMaxInput.value;
+    var newAvr=event.target.newAvrInput.value;
+    var newLocationss=new Sales(newLocation,newMin,newMax,newAvr);
+    // console.log(newLocations);
+    newLocationss.RandomCookies();
+    newLocationss.render();
+    
+    console.log(newLocationss);
+}
+
+
 generatFooter();
+
+
 // for(var j=0;j<hours.length;j++){
 //         randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
 //         this.cookiesInHour.push(randomCookies);

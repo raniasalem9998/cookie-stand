@@ -37,7 +37,11 @@ h2,h1{
     padding: 5px;
 }
 #parent td{
+padding: 10px;
     text-align: center;
     margin: auto;
     border:0.05px solid rgb(230, 178, 178);
+}
+th{
+    padding: 5px;
 }

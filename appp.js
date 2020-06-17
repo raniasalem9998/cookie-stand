@@ -42,7 +42,7 @@ var table = document.getElementById('parent')
 
 function generateHeader() {
     var headerTr = document.createElement('tr');
-    var emptyTh = document.createElement('td')
+    var emptyTh = document.createElement('th')
     headerTr.appendChild(emptyTh);
     for (var i = 0; i < hours.length; i++) {
         var headerTh = document.createElement('th');
@@ -110,7 +110,7 @@ function generatFooter() {
         footerTr.appendChild(hourTotalTd);
     }
     var totalOfTotalTd = document.createElement('td');
-    totalOfTotalTd.textContent = totalOfTotal;
+    totalOfTotalTd.textContent = totalOfTotal/2;
     footerTr.appendChild(totalOfTotalTd);
     table.appendChild(footerTr);
 }

@@ -32,7 +32,7 @@ var table = document.getElementById('parent')
 
 function generateHeader() {
     var headerTr = document.createElement('tr');
-    var emptyTh = document.createElement('td')
+    var emptyTh = document.createElement('th')
     headerTr.appendChild(emptyTh);
     for (var i = 0; i < hours.length; i++) {
         var headerTh = document.createElement('th');

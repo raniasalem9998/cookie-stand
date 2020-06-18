@@ -1,43 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@1,700&display=swap');
-body{
-    /* background-color: black; */
-    color: brown;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: black;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-img {
+    /* font-family:  'Bellota', cursive; */
+   header,body{
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+   }
+   
+    #header{
+    background-color: rgba(175, 28, 28, 0.979);
+    border:1px solid yellow;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 80px;
+    z-index: 100;
+   } 
+
+
+   header img{
+       float: left;
+       height: 70px;
+       width: 200px;
+       margin-top: 5px;
+       margin-left: 50px;
+       margin-bottom: 0px;
+       margin-right: 5px;
+   }
+
+   header h6{
+       font-size: 20px;
+    float: left;
+  font-family:  'Bellota', cursive;
+  color: beige;
+  margin-right: 25px;
+
+   }
+
+nav ul{
+    
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+   ul li{
+
+    display: inline-block;
+    list-style: none;
+    height: 70px;
+    width: 200px;
+    margin: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    color: cornsilk;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    scroll-padding-left: 15px;
+    left: 0px;
+   }
+
+main h2{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-  }
-
-header {
-    font-family:  'Bellota', cursive;
+    margin-top: 150px;
     text-align: center;
-    padding: 5px;
-    color: darkred;
+    font-size: 80px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    color:rgb(117, 10, 10);
+    margin-bottom: 50px;
+}
+
+
+#who{
+    margin: auto;
+    text-align: center;
+    border:5px solid black;
+    width: 1000px;
+    height: 1800px;
+    position: relative;
+}
+
+#who h3{
+    position: absolute;
+    display: inline-block;
+    left: 213.5px;
+    font-size: 80px;
+    color: black;
+    font-family: 'Fredoka One', cursive;
+    color:rgb(117, 10, 10);
+}
+
+
+#who article{
+    position: absolute;
+    top: 200px;
+    width: 600px;
+    left:200px;
+    font-size: 30px;
+    font-family:  'Bellota', cursive;
     
-
-}
-h2,h1{
-    font-family:  'Bellota', cursive;
-    text-align: center;
-}
-#welcome{
-    text-align: center;
 }
 
-#parent{
-    border: 2px solid snow;
-    max-width: 50%;
-    margin: auto;
-    padding: 5px;
+#do{
+
+position: absolute;
+margin-top: 150px;
+
+height: 1400px;
+
+
+
 }
-#parent td{
-    text-align: center;
-    margin: auto;
-    border:0.05px solid rgb(230, 178, 178);
+#do h3{
+    top:1080px;
+    left: 0px;
+    width: 600px;
+    display: inline-block;
+position: absolute;
+
+
+}
+#do h3 strong{
+    position: inline-block;
+    color: gold;
+    
+}
+#img{
+    
+    
+    text-align: right;
+    width: 1000px;
+}
+
+img,p{
+    top:400px;
+    position: inline-block;
+}
+
+#footer{
+    background-color: rgba(175, 28, 28, 0.979);
+    border:1px solid yellow;
+    position: absolute;
+    width: 100%;
+    top: 2100px;
+    height: 80px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding: 30px;
+    
+    
+   } 
+    
+#footer ul li{
+
+    margin: 100px;
 }

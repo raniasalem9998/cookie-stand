@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+    /* font-family:  'Bellota', cursive; */
+   header,body{
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+   }
+   
+    #header{
+    background-color: rgba(175, 28, 28, 0.979);
+    border:1px solid yellow;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 80px;
+    z-index: 100;
+   }
+   header img{
+    float: left;
+    height: 70px;
+    width: 200px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+}
+
+header h6{
+    font-size: 20px;
+ float: left;
+font-family:  'Bellota', cursive;
+color: beige;
+margin-right: 25px;
+
+}
+
+nav ul{
+ 
+ text-align: center;
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+ul li{
+
+ display: inline-block;
+ list-style: none;
+ height: 70px;
+ width: 200px;
+ margin: 5px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: 30px;
+ color: cornsilk;
+ padding-top: 15px;
+ padding-bottom: 15px;
+ scroll-padding-left: 15px;
+ left: 0px;
+}
+table{
+    margin-top: 160px;
+    margin-left: 70px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+   #footer{
+    background-color: rgba(175, 28, 28, 0.979);
+    border:1px solid yellow;
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+    
+    
+   } 
+    
+#footer ul li{
+
+    margin: 100px;
+}

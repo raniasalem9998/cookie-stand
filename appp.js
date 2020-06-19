@@ -3,7 +3,7 @@ var locationArr = [];
 var totalOfTotal = 0;
 console.log(locationArr)
 
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm' , '7pm'];
 
 function Sales(location, minCustomerNumber, maxCustomerNumber, avrgCookies) {
     this.location = location;
@@ -11,21 +11,14 @@ function Sales(location, minCustomerNumber, maxCustomerNumber, avrgCookies) {
     this.maxCustomerNumber = maxCustomerNumber;
     this.avrgCookies = avrgCookies;
     this.cookiesInHour = [];
-    this.totalCookiesPerDay = 0;
     this.sum=0;
      this.array=[];
     locationArr.push(this);
 };
 
-Sales.prototype.RandomCookies = function () {
-    // var randomCookies;
-    // for (var i = 0; i < hours.length; i++) {
-    //     randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-    //     this.cookiesInHour.push(randomCookies);
-    //    
-        this.totalCookiesPerDay += randomCookies;
+Sales.prototype.RandomCookies = function () {   
 
-    // }
+        this.totalCookiesPerDay += randomCookies;
    var randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
    console.log(randomCookies)
    return randomCookies;
@@ -114,7 +107,7 @@ function generatFooter() {
     footerTr.appendChild(totalOfTotalTd);
     table.appendChild(footerTr);
 }
-// calculateSum();
+
 generateHeader();
 
 var seattle=new Sales('Seattle',23,65,6.3);
@@ -128,11 +121,6 @@ for (var i=0; i<locationArr.length;i++){
     locationArr[i].RandomCookies();
     locationArr[i].render();
 
-    
-    
 }
+
 generatFooter();
-// for(var j=0;j<hours.length;j++){
-//         randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-//         this.cookiesInHour.push(randomCookies);
-// }

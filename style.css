@@ -147,13 +147,16 @@ img,p{
     top: 2100px;
     height: 80px;
     bottom: 0px;
-    margin-bottom: 0px;
-    padding: 30px;
-    
-    
+    padding: 0px;
    } 
     
-#footer ul li{
 
-    margin: 100px;
+#footer li{
+    font-size: 20px;
+    margin-left: 10px;
+    width:340px;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }

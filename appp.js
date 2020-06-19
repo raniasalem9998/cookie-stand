@@ -11,21 +11,15 @@ function Sales(location, minCustomerNumber, maxCustomerNumber, avrgCookies) {
     this.maxCustomerNumber = maxCustomerNumber;
     this.avrgCookies = avrgCookies;
     this.cookiesInHour = [];
-    this.totalCookiesPerDay = 0;
     this.sum=0;
      this.array=[];
     locationArr.push(this);
 };
 
 Sales.prototype.RandomCookies = function () {
-    // var randomCookies;
-    // for (var i = 0; i < hours.length; i++) {
-    //     randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-    //     this.cookiesInHour.push(randomCookies);
-    //    
+
         this.totalCookiesPerDay += randomCookies;
 
-    // }
    var randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
    console.log(randomCookies)
    return randomCookies;
@@ -127,12 +121,5 @@ for (var i=0; i<locationArr.length;i++){
   
     locationArr[i].RandomCookies();
     locationArr[i].render();
-
-    
-    
 }
 generatFooter();
-// for(var j=0;j<hours.length;j++){
-//         randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-//         this.cookiesInHour.push(randomCookies);
-// }

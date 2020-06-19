@@ -1,15 +1,7 @@
 'use strict';
 
-var hours= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var hours= ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-// function Sales (location,minCostumerNum,maxCostumerNum,avrCookies){
-// this.location=location;
-// this.minCostumerNum=minCostumerNum;
-// this.maxCostumerNum=maxCostumerNum;
-// this.avrCookies=avrCookies;
-// this.cookiesInHour=[];
-// this.totalArray=[];
-// }
 
 var seattle = {
     location: 'seattle',
@@ -18,7 +10,6 @@ var seattle = {
     avrCookies: 6.3,
     cookiesInHour: [],
     allCookies: 0,
-    //cookies in the hour
     
 
     cookies: function () {
@@ -36,7 +27,7 @@ var seattle = {
     },
    
     render : function () {
-        // var ul = document.getElementById('ul');
+
         for (var i = 0; i < 13; i++) {
            
             var li = document.createElement('li');
@@ -60,7 +51,6 @@ var Tokyo = {
     avrCookies: 1.2,
     cookiesInHour: [],
     allCookies: 0,
-    //cookies in the hour
     
 
     cookies: function () {
@@ -78,7 +68,7 @@ var Tokyo = {
     },
    
     render : function () {
-        // var ul = document.getElementById('ul');
+
         for (var i = 0; i < 13; i++) {
            
             var li = document.createElement('li');
@@ -102,7 +92,6 @@ var Dubai = {
     avrCookies: 3.7,
     cookiesInHour: [],
     allCookies: 0,
-    //cookies in the hour
     
 
     cookies: function () {
@@ -144,7 +133,6 @@ var Paris = {
     avrCookies: 6.3,
     cookiesInHour: [],
     allCookies: 0,
-    //cookies in the hour
     
 
     cookies: function () {
@@ -162,7 +150,7 @@ var Paris = {
     },
    
     render : function () {
-        // var ul = document.getElementById('ul');
+        
         for (var i = 0; i < 13; i++) {
            
             var li = document.createElement('li');
@@ -186,7 +174,6 @@ var Lima = {
     avrCookies: 4.6,
     cookiesInHour: [],
     allCookies: 0,
-    //cookies in the hour
     
 
     cookies: function () {
@@ -204,7 +191,7 @@ var Lima = {
     },
    
     render : function () {
-        // var ul = document.getElementById('ul');
+        
         for (var i = 0; i < 13; i++) {
            
             var li = document.createElement('li');
@@ -226,4 +213,4 @@ function generateRandomNum(minValue, maxValue) {
     return Math.floor(randomValue * (maxValue - minValue + 1)) + minValue;
 };
 
-// copy and past to add for other locations
+

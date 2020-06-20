@@ -3,7 +3,7 @@ var locationArr = [];
 var totalOfTotal = 0;
 console.log(locationArr)
 
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm'];
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm' , '7pm'];
 
 function Sales(location, minCustomerNumber, maxCustomerNumber, avrgCookies) {
     this.location = location;
@@ -32,7 +32,7 @@ var table = document.getElementById('parent')
 
 function generateHeader() {
     var headerTr = document.createElement('tr');
-    var emptyTh = document.createElement('td')
+    var emptyTh = document.createElement('th')
     headerTr.appendChild(emptyTh);
     for (var i = 0; i < hours.length; i++) {
         var headerTh = document.createElement('th');
@@ -142,8 +142,3 @@ function addLocation(event){
     generatFooter();
 }
 
-
-// for(var j=0;j<hours.length;j++){
-//         randomCookies = Math.floor(generateRandomNum(this.minCustomerNumber, this.maxCustomerNumber) * this.avrgCookies);
-//         this.cookiesInHour.push(randomCookies);
-// }

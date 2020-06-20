@@ -88,17 +88,19 @@ table th,td{
 }
 
    #footer{
-    top:540px;
+    top:560px;
     background-color: rgba(175, 28, 28, 0.979);
     border:1px solid yellow;
     position: fixed;
     width: 100%;
     height: 60px;
     margin-bottom: 5px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     
    } 
     #footer li{
-        padding: 0px;
+        padding-right:30px ;
+        font-size: 20px;
+    
     }
 
